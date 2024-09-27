@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WaitMe Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      .container {
+        text-align: center;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        margin-bottom: 1rem;
+      }
+      button {
+        margin: 0.5rem;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      #demoBox {
+        width: 200px;
+        height: 200px;
+        background-color: #ddd;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        border-radius: 8px;
+      }
+    </style>
+    <link rel="stylesheet" href="waitMe.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>WaitMe Demo</h1>
+      <div id="demoBox">Demo Box</div>
+      <button onclick="showWaitMe('bounce')">Bounce</button>
+      <button onclick="showWaitMe('rotateplane')">Rotate Plane</button>
+      <button onclick="showWaitMe('stretch')">Stretch</button>
+      <button onclick="showWaitMe('orbit')">Orbit</button>
+      <button onclick="showWaitMe('roundBounce')">Round Bounce</button>
+      <button onclick="showWaitMe('win8')">Win8</button>
+      <button onclick="showWaitMe('ios')">iOS</button>
+      <button onclick="showWaitMe('facebook')">Facebook</button>
+      <button onclick="hideWaitMe()">Hide WaitMe</button>
+    </div>
+
+    <script src="modernized-waitme-min.js"></script>
+    <script>
+      // Demo functions
+      let currentWaitMe = null;
+
+      function showWaitMe(effect) {
+        if (currentWaitMe) {
+          currentWaitMe.hide();
+        }
+        currentWaitMe = new WaitMe("#demoBox", {
+          effect: effect,
+          text: "Por favor espere...",
+          bg: "rgba(255,255,255,0.7)",
+          color: "#000",
+          maxSize: "",
+          waitTime: -1,
+          textPos: "vertical",
+          fontSize: "",
+          source: "",
+          onClose: () => console.log("WaitMe closed"),
+        });
+      }
+
+      function hideWaitMe() {
+        if (currentWaitMe) {
+          currentWaitMe.hide();
+          currentWaitMe = null;
+        }
+      }
+    </script>
+  </body>
+</html>
