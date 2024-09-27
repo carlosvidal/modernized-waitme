@@ -95,3 +95,64 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Inspired by the original jQuery [waitMe plugin](https://github.com/vadimsva/waitMe)
 - Modernized and adapted for use without jQuery
 
+# WaitMe.js
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+
+WaitMe.js is a lightweight, customizable loading spinner and progress bar library for web applications. It provides an easy way to show loading states with various animations.
+
+## Demo
+
+Check out the live demo: [WaitMe.js Demo](https://carlosvidal.github.io/modernized-waitme/)
+
+## Features
+
+- Multiple animation effects
+- Customizable colors and sizes
+- No dependencies
+- Easy to integrate
+- Responsive design
+
+## Installation
+
+You can include WaitMe.js in your project using one of the following methods:
+
+### 1. Direct download
+
+Download the `waitMe.js` and `waitMe.css` files from this repository and include them in your HTML:
+
+```html
+<link rel="stylesheet" href="path/to/waitMe.css">
+<script src="path/to/waitMe.js"></script>
+```
+
+### 2. npm
+
+```bash
+npm install waitme-js
+```
+
+Then import it in your JavaScript:
+
+```javascript
+import WaitMe from 'waitme-js';
+```
+
+## Usage
+
+Here's a basic example of how to use WaitMe.js:
+
+```javascript
+// Create a new WaitMe instance
+const waitMe = new WaitMe('#elementId', {
+    effect: 'bounce',
+    text: 'Please wait...',
+    bg: 'rgba(255,255,255,0.7)',
+    color: '#000',
+    maxSize: '',
+    waitTime: -1,
+    textPos: 'vertical',
+    fontSize: '',
+    source: '',
+    onC
