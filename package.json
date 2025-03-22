@@ -1,0 +1,34 @@
+{
+  "name": "@carlosvidal/modernized-waitme",
+  "version": "1.0.0",
+  "description": "A lightweight, customizable loading spinner and progress bar library",
+  "main": "modernized-waitme.js",
+  "style": "waitMe.css",
+  "files": [
+    "modernized-waitme.js",
+    "modernized-waitme-min.js",
+    "waitMe.css",
+    "waitMe.min.css"
+  ],
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosvidal/modernized-waitme.git"
+  },
+  "keywords": [
+    "loading",
+    "spinner",
+    "progress",
+    "wait",
+    "loading-spinner",
+    "progress-bar"
+  ],
+  "author": "Carlos Vidal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carlosvidal/modernized-waitme/issues"
+  },
+  "homepage": "https://github.com/carlosvidal/modernized-waitme#readme"
+}
